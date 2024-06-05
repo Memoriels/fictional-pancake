@@ -20,6 +20,13 @@ import {MatFormFieldModule} from "@angular/material/form-field";
 import {MatAutocompleteModule} from "@angular/material/autocomplete";
 import {MatInputModule} from "@angular/material/input";
 import {MatChipsModule} from "@angular/material/chips";
+import { MatButtonModule } from '@angular/material/button';
+import { MatSelectModule } from '@angular/material/select';
+import { MatRadioModule } from '@angular/material/radio';
+import { MatCardModule } from '@angular/material/card';
+import { CheckboxDashboardComponent } from './checkbox-dashboard/checkbox-dashboard.component';
+import {MatCheckboxModule} from '@angular/material/checkbox';
+
 
 
 
@@ -31,6 +38,7 @@ import {MatChipsModule} from "@angular/material/chips";
     AnnouncementDetailsEntryComponent,
     FilterTagComponent,
     AnnouncementGeneralSearchAutocompleteComponent,
+    CheckboxDashboardComponent,
     
   ],
   imports: [
@@ -47,11 +55,17 @@ import {MatChipsModule} from "@angular/material/chips";
     FormsModule,
     MatInputModule,
     AsyncPipe,
-    MatChipsModule
+    MatChipsModule,
+    MatButtonModule,
+    MatSelectModule,
+    MatRadioModule,
+    MatCardModule,
+    MatCheckboxModule
   ],
   exports: [
     AnnouncementGeneralSearchAutocompleteComponent,
-    AnnouncementListComponent
+    AnnouncementListComponent,
+    CheckboxDashboardComponent
   ],
   providers: [
     MatDialog

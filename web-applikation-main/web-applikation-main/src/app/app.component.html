@@ -1,4 +1,4 @@
-<mat-toolbar role="heading" style="position: fixed; z-index: 2">
+<!-- <mat-toolbar role="heading" style="position: fixed; z-index: 2">
   <mat-toolbar-row>
     <mat-icon (click)="drawer.toggle()" *ngIf="!drawer.opened" matTooltip="Filter öffnen"
               style="cursor: pointer; position: absolute">
@@ -23,18 +23,25 @@
   <mat-toolbar-row *ngIf="viewportWidth <= 600">
     <span style="font-weight: bold">Themen für Studentische Arbeiten</span>
   </mat-toolbar-row>
-</mat-toolbar>
+</mat-toolbar> -->
 
 
-<mat-drawer-container autosize class="announcement_list_top" hasBackdrop="true"
+
+<!-- <mat-drawer-container autosize class="announcement_list_top" hasBackdrop="true"
                       style="margin-bottom: 50px; min-height: calc(100vh - 75px)">
   <mat-drawer #drawer class="announcement_list_top" mode="over" style="position: fixed; padding: 10px">
     <app-announcements-filter></app-announcements-filter>
-  </mat-drawer>
+  </mat-drawer> 
   <mat-drawer-content>
-    <app-announcement-list></app-announcement-list>
+    
   </mat-drawer-content>
-</mat-drawer-container>
+</mat-drawer-container> -->
+
+<app-checkbox-dashboard></app-checkbox-dashboard>
+
+<app-announcement-list></app-announcement-list>
+
+
 
 <mat-toolbar class="footer" *ngIf="!isInIFrame">
   <div style="display: flex; flex-direction: row; flex-wrap: wrap">

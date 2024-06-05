@@ -10,19 +10,19 @@
 }
 
 @media screen and (min-width: 600px) {
-  .announcement_list_top {
+  /* .announcement_list_top {
     top: 64px;
-  }
+  } */
 }
 
 @media screen and (max-width: 599px) and (min-width: 551px) {
-  .announcement_list_top {
+  /* .announcement_list_top {
     top: 56px;
-  }
+  } */
 }
 
 @media screen and (max-width: 550px) {
-  .announcement_list_top {
+  /* .announcement_list_top {
     top: 112px;
-  }
+  } */
 }

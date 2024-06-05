@@ -10,6 +10,7 @@ import { Connection } from '../communitymashup/model/connection.model';
 import { Person } from '../communitymashup/model/person.model';
 import { Organisation } from '../communitymashup/model/organisation.model';
 import { Tag } from '../communitymashup/model/tag.model';
+import {MatCheckboxModule} from '@angular/material/checkbox';
 
 @Injectable({
   providedIn: 'root',
@@ -97,7 +98,8 @@ export class AnnouncementsService {
     organisations: Organisation[],
     tags: Tag[],
     person?: Person
-  ): Announcement {
+  ): Announcement
+   {
     const announcement: Announcement = {
       advisor: '',
       advisorMail: '',
