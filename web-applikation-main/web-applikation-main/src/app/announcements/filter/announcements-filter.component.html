@@ -1,14 +1,19 @@
-<app-multiselect-tree>
-</app-multiselect-tree>
-<app-multiselect-autocomplete [label]="'Betreuende Person'"
-                              [queryParamKey]="'advisor'">
+<div class="horizontal-container">
+    <app-multiselect-tree></app-multiselect-tree>
+    <app-multiselect-autocomplete [label]="'Betreuende Person'"
+                                  [queryParamKey]="'advisor'">
+    </app-multiselect-autocomplete>
+    <app-multiselect-autocomplete [label]="'Art der Arbeit'"
+                                  [queryParamKey]="'types'">
+    </app-multiselect-autocomplete>
+    <app-multiselect-autocomplete [label]="'Status'"
+                                  [queryParamKey]="'state'">
+    </app-multiselect-autocomplete>
+    <app-multiselect-autocomplete [label]="'Stichwort'"
+                                  [queryParamKey]="'keywords'">
+    </app-multiselect-autocomplete>
+    <app-multiselect-autocomplete [label]="'Institut'"
+    [queryParamKey]="'institute'">
 </app-multiselect-autocomplete>
-<app-multiselect-autocomplete [label]="'Art der Arbeit'"
-                              [queryParamKey]="'types'">
-</app-multiselect-autocomplete>
-<app-multiselect-autocomplete [label]="'Status'"
-                              [queryParamKey]="'state'">
-</app-multiselect-autocomplete>
-<app-multiselect-autocomplete [label]="'Stichwort'"
-                              [queryParamKey]="'keywords'">
-</app-multiselect-autocomplete>
+  </div>
+  

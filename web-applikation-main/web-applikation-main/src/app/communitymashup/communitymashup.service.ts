@@ -161,7 +161,7 @@ export class CommunityMashupService {
           //console.log('First item after initializeDataSet call:', JSON.stringify(self.items[0], null, 2));
 
           console.log('itemIdMap', self.itemIdMap);
-          console.log('itemTypeMap', self.itemTypeMap.get("data:person"));
+          console.log('itemTypeMap', self.itemTypeMap);
 
           // Log the first entry in itemIdMap
           //const firstItemIdEntry = self.itemIdMap.entries().next().value;
