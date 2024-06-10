@@ -54,7 +54,7 @@
         [queryParamKey]="'types'"
         [tagName]="type"
         style="
-          border: solid 1px #205ebd;
+          border: solid 1px #ed6600;
           border-radius: 5px;
           margin-right: 5px;
           margin-bottom: 2px;
@@ -93,137 +93,30 @@
       </div>
     </div>
     <br />
-    <div
-      *ngIf="window.innerWidth > 550"
-      style="display: flex; flex-direction: row"
-    >
-      <div
-        style="
-          border: solid 1px grey;
-          border-radius: 5px;
-          padding: 2px;
-          margin: 1px;
-          width: 50%;
-        "
-      >
-        <h6>Betreuende Einrichtung</h6>
-        <mat-divider></mat-divider>
-        <app-filter-tag
-          [queryParamKey]="'faculty'"
-          [tagName]="announcement.faculty"
-        >
-        </app-filter-tag>
-        <mat-divider></mat-divider>
-        <app-filter-tag
-          [queryParamKey]="'institute'"
-          [tagName]="announcement.institute"
-        >
-        </app-filter-tag>
-        <mat-divider></mat-divider>
-        <app-filter-tag
-          [queryParamKey]="'professorship'"
-          [tagName]="announcement.professorship"
-        >
-        </app-filter-tag>
+    <div *ngIf="window.innerWidth > 550" style="display: flex; flex-direction: row;">
+      <div class="card shadow-sm" style="flex: 1; margin-right: 1rem;">
+        <div class="card-body">
+          <h6 class="card-title">Betreuende Einrichtung</h6>
+          <mat-divider></mat-divider>
+          <app-filter-tag [queryParamKey]="'faculty'" [tagName]="announcement.faculty"></app-filter-tag>
+          <mat-divider></mat-divider>
+          <app-filter-tag [queryParamKey]="'institute'" [tagName]="announcement.institute"></app-filter-tag>
+          <mat-divider></mat-divider>
+          <app-filter-tag [queryParamKey]="'professorship'" [tagName]="announcement.professorship"></app-filter-tag>
+        </div>
       </div>
-      <div
-        style="
-          border: solid 1px grey;
-          border-radius: 5px;
-          padding: 2px;
-          margin: 1px;
-          width: 50%;
-        "
-      >
-        <h6>Betreuende Person</h6>
-        <mat-divider></mat-divider>
-        <app-filter-tag
-          (click)="$event.stopPropagation()"
-          [queryParamKey]="'advisor'"
-          [tagName]="announcement.advisor"
-        >
-        </app-filter-tag>
-        <a
-          (click)="$event.stopPropagation()"
-          *ngIf="announcement.advisorMail"
-          [href]="
-            'mailto:' +
-            announcement.advisorMail +
-            '?subject=Studentische Arbeit: ' +
-            announcement.title
-          "
-        >
-          {{ announcement.advisorMail }}
-        </a>
+      
+      <div class="card shadow-sm" style="flex: 1;">
+        <div class="card-body">
+          <h6 class="card-title">Betreuende Person</h6>
+          <mat-divider></mat-divider>
+          <app-filter-tag (click)="$event.stopPropagation()" [queryParamKey]="'advisor'" [tagName]="announcement.advisor"></app-filter-tag>
+          <a (click)="$event.stopPropagation()" *ngIf="announcement.advisorMail" [href]="'mailto:' + announcement.advisorMail + '?subject=Studentische Arbeit: ' + announcement.title">
+            {{ announcement.advisorMail }}
+          </a>
+        </div>
       </div>
     </div>
-    <div
-      *ngIf="window.innerWidth <= 550"
-      style="display: flex; flex-direction: row; flex-wrap: wrap"
-    >
-      <div
-        style="
-          border: solid 1px grey;
-          border-radius: 5px;
-          padding: 2px;
-          margin: 1px;
-          width: 100%;
-        "
-      >
-        <h6>Betreuende Einrichtung</h6>
-        <mat-divider></mat-divider>
-        <app-filter-tag
-          (click)="$event.stopPropagation()"
-          [queryParamKey]="'faculty'"
-          [tagName]="announcement.faculty"
-        >
-        </app-filter-tag>
-        <mat-divider></mat-divider>
-        <app-filter-tag
-          (click)="$event.stopPropagation()"
-          [queryParamKey]="'institute'"
-          [tagName]="announcement.institute"
-        >
-        </app-filter-tag>
-        <mat-divider></mat-divider>
-        <app-filter-tag
-          (click)="$event.stopPropagation()"
-          [queryParamKey]="'professorship'"
-          [tagName]="announcement.professorship"
-        >
-        </app-filter-tag>
-      </div>
-      <div
-        style="
-          border: solid 1px grey;
-          border-radius: 5px;
-          padding: 2px;
-          margin: 1px;
-          width: 100%;
-        "
-      >
-        <h6>Betreuende Person</h6>
-        <mat-divider></mat-divider>
-        <app-filter-tag
-          (click)="$event.stopPropagation()"
-          [queryParamKey]="'advisor'"
-          [tagName]="announcement.advisor"
-        >
-        </app-filter-tag>
-        <mat-divider></mat-divider>
-        <a
-          (click)="$event.stopPropagation()"
-          *ngIf="announcement.advisorMail"
-          [href]="
-            'mailto:' +
-            announcement.advisorMail +
-            '?subject=Studentische Arbeit: ' +
-            announcement.title
-          "
-        >
-          {{ announcement.advisorMail }}
-        </a>
-      </div>
-    </div>
+    
   </div>
 </div>
