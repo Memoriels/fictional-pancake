@@ -49,16 +49,32 @@
 
 
 
-<mat-toolbar class="footer" *ngIf="!isInIFrame">
-  <div style="display: flex; flex-direction: row; flex-wrap: wrap">
-    <div>
-      Universität der Bundeswehr München &nbsp;
+<mat-toolbar class="footer" style="background-color: #6d95d1; color: white; height: 20vh; display: flex; justify-content: center; align-items: center;">
+  <div style="text-align: center;">
+    <div style="margin-bottom: 5px;">
+      <div>Universität der Bundeswehr München</div>
+      <div>Werner-Heisenberg-Weg 39</div>
+      <div>85577 Neubiberg</div>
     </div>
-    <div>
-      Werner-Heisenberg-Weg 39 &nbsp;
+    <div style="display: flex; flex-direction: row; justify-content: center; margin-top: 2px;">
+      <div style="margin-right: 10px;">
+        <a href="https://de.linkedin.com/school/universitaet-der-bundeswehr-muenchen//" target="_blank">
+          <mat-icon style="cursor: pointer; color: white; font-size: 20px;">linkedin</mat-icon>
+        </a>
+      </div>
+      <div style="margin-right: 10px;">
+        <a href="https://www.facebook.com/UniBwMuc/?locale=de_DE" target="_blank">
+          <mat-icon style="cursor: pointer; color: white; font-size: 20px;">facebook</mat-icon>
+        </a>
+      </div>
     </div>
-    <div>
-      85577 Neubiberg
+    <div style="font-size: 12px; margin-top: 5px;">
+      <div>
+        Made with <mat-icon style="cursor: pointer; color: white; font-size: 12px;">favorite</mat-icon> in Angular
+      </div>
     </div>
   </div>
 </mat-toolbar>
+
+
+
