@@ -1,6 +1,6 @@
 # 🎓 Angular University Project 📚
 
-Welcome to **Angular University Project** - where the angular velocity of your coding skills meets the inertia of academic deadlines! This repository is your go-to guide for creating a magnificent (and slightly sarcastic) website using Angular for our university project.
+Welcome to **Angular University Project** - where the angular velocity of your coding skills meets the inertia of academic deadlines! This repository is your go-to guide for creating a magnificent (and slightly sarcastic) website using Angular for our university project. hhh
 
 ## 📖 Table of Contents
 
