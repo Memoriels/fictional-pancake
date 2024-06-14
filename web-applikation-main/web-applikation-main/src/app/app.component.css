@@ -1,6 +1,66 @@
 .example-spacer {
   flex: 1 1 auto;
 }
+.header-toolbar {
+  background-color: orange; /* Change background color to orange */
+  position: fixed;
+  z-index: 2;
+  width: 100%; /* Ensure the toolbar spans the full width */
+}
+
+.header-toolbar mat-toolbar-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Distribute space between elements */
+}
+
+.header-logo-container {
+  max-height: 40px;
+  width: auto;
+  margin-left: 40px;
+  margin-right: 40px;
+  background-color: rgba(255, 255, 255, 0.8); /* White background with 80% opacity */
+  padding: 5px; /* Add some padding to ensure the background is visible */
+  border-radius: 5px; /* Optional: add some rounded corners */
+}
+
+.header-logo {
+  max-height: 100%;
+  width: auto;
+}
+
+.header-title {
+  flex-grow: 1; /* Allow the title to grow and take up available space */
+  text-align: center; /* Center the text */
+}
+
+.header-text {
+  font-weight: bold;
+  text-transform: uppercase; /* Transform text to uppercase */
+  font-family: 'Arial', sans-serif; /* Sans-serif font with little to no serifs */
+  font-size: 20px; /* Adjust the font size as needed */
+  letter-spacing: 1px; /* Adjust letter spacing for better readability */
+  color: rgb(26, 25, 25); /* White color for better contrast against orange background */
+}
+
+.header-icon {
+  margin-left: auto; /* Push the icon to the far right */
+}
+
+.info-icon {
+  cursor: pointer;
+  vertical-align: bottom;
+}
+
+.header-title-mobile {
+  text-align: center; /* Center the text for mobile view */
+}
+
+.filter-icon {
+  cursor: pointer;
+  position: absolute;
+}
+
 
 .footer {
   height: 75px;
