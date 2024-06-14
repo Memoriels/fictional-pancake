@@ -26,6 +26,9 @@ import { MatRadioModule } from '@angular/material/radio';
 import { MatCardModule } from '@angular/material/card';
 import { CheckboxDashboardComponent } from './checkbox-dashboard/checkbox-dashboard.component';
 import {MatCheckboxModule} from '@angular/material/checkbox';
+import { QRCodeModule } from 'angularx-qrcode';
+
+
 
 
 
@@ -60,7 +63,8 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
     MatSelectModule,
     MatRadioModule,
     MatCardModule,
-    MatCheckboxModule
+    MatCheckboxModule,
+    QRCodeModule
   ],
   exports: [
     AnnouncementGeneralSearchAutocompleteComponent,

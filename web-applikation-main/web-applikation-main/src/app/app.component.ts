@@ -12,6 +12,8 @@ export class AppComponent {
   viewportWidth: number = window.innerWidth;
   isInIFrame = true;
 
+  
+
   constructor(/*private snackBar: MatSnackBar*/) {
     fromEvent(window, 'resize').subscribe(() => this.viewportWidth = window.innerWidth);
     try {
@@ -125,3 +127,5 @@ export class Item {
   }
 
 }
+
+
