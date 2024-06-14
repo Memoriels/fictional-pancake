@@ -43,7 +43,7 @@ export class AnnouncementDetailsComponent implements OnInit {
     const url = canvas.toDataURL('image/png'); 
     const a = document.createElement('a');
     a.href = url;
-    a.download = 'qrcode.png';
+    a.download = 'QRCode-Anzeige.png';
     document.body.appendChild(a);
     a.click();
     document.body.removeChild(a);
