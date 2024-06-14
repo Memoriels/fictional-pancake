@@ -193,4 +193,9 @@ export class AnnouncementsService {
 
     return announcements;
   }
+
+  // private getRandomAnnouncement(announcements: Announcement[]){
+  //   return announcements[Math.floor(Math.random() * announcements.length)];
+  // }
+
 }

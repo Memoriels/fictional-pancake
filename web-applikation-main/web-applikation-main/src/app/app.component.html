@@ -1,20 +1,10 @@
-<mat-toolbar role="heading" style="position: fixed; z-index: 2">
+<mat-toolbar role="heading" style="position: sticky; top: 0; z-index: 2; background-color: rgb(153, 151, 151);">
   <mat-toolbar-row>
-    <!-- <mat-icon (click)="drawer.toggle()" *ngIf="!drawer.opened" matTooltip="Filter öffnen"
-              style="cursor: pointer; position: absolute">
-      filter_list
-    </mat-icon>
-    <mat-icon (click)="drawer.toggle()" *ngIf="drawer.opened" matTooltip="Filter schließen"
-              style="cursor: pointer; position: absolute">
-      filter_list
-    </mat-icon> -->
-    <img *ngIf="!isInIFrame"
-         ngSrc="assets/1280px-Signet_unibw.svg.png"
-         style="max-height: 40px; width: auto; margin-left: 40px; margin-right: 40px" alt="image" height="247"
-         width="1280">
+    <!-- Optionale Icons oder andere Elemente hier einfügen -->
+    <img *ngIf="!isInIFrame" ngSrc="assets/1280px-Signet_unibw.svg.png" style="max-height: 40px; width: auto; margin-left: 40px; margin-right: 40px" alt="image" height="247"
+    width="1280">
     <div style="margin-left: auto">
-      <span *ngIf="viewportWidth > 600"
-            style="font-weight: bold; margin-right: 10px">Themen für Studentische Arbeiten</span>
+      <span *ngIf="viewportWidth > 600" style="font-weight: bold; margin-right: 10px">Themen für Studentische Arbeiten</span>
       <mat-icon (click)="clickOnInfoIcon()" matTooltip="Mehr Infos" style="cursor: pointer; vertical-align: bottom">
         info
       </mat-icon>
@@ -25,31 +15,14 @@
   </mat-toolbar-row>
 </mat-toolbar>
 
-
-
-<mat-drawer-container autosize class="announcement_list_top" hasBackdrop="true"
-                      style="margin-bottom: 50px; min-height: 50px">
-  <mat-drawer #drawer class="announcement_list_top" mode="over" style="position: fixed; padding: 10px">
-
-  </mat-drawer> 
-  <mat-drawer-content>
-
-  </mat-drawer-content>
-</mat-drawer-container>
-
-<div class="row">
-  <div class="col-2">
+<div class="flex-container">
+  <div class="filter-container">
     <app-announcements-filter></app-announcements-filter>
   </div>
-  <div class="col-10">
+  <div class="list-container">
     <app-announcement-list></app-announcement-list>
   </div>
 </div>
-
-
-
-
-
 
 <mat-toolbar class="footer" style="background-color: #ed6600; color: white; height: 20vh; display: flex; justify-content: center; align-items: center;">
   <div style="text-align: center;">
@@ -77,6 +50,3 @@
     </div>
   </div>
 </mat-toolbar>
-
-
-
