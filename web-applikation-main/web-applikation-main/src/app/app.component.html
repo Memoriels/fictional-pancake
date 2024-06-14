@@ -1,4 +1,4 @@
-<mat-toolbar role="heading" style="position: fixed; z-index: 2">
+<mat-toolbar role="heading" class="header-toolbar">
   <mat-toolbar-row>
     <!-- <mat-icon (click)="drawer.toggle()" *ngIf="!drawer.opened" matTooltip="Filter öffnen"
               style="cursor: pointer; position: absolute">
@@ -10,22 +10,22 @@
     </mat-icon> -->
     <img *ngIf="!isInIFrame"
          ngSrc="assets/1280px-Signet_unibw.svg.png"
-         style="max-height: 40px; width: auto; margin-left: 40px; margin-right: 40px" alt="image" height="247"
+         style="max-height: 40px; width: auto; margin-left: 40px; margin-right: 40px; background-color: rgba(255, 255, 255, 0.8); padding: 5px; border-radius: 5px " alt="image" height="247" 
          width="1280">
-    <div style="margin-left: auto">
-      <span *ngIf="viewportWidth > 600"
-            style="font-weight: bold; margin-right: 10px">Themen für Studentische Arbeiten</span>
-      <mat-icon (click)="clickOnInfoIcon()" matTooltip="Mehr Infos" style="cursor: pointer; vertical-align: bottom">
-        info
-      </mat-icon>
-    </div>
-  </mat-toolbar-row>
-  <mat-toolbar-row *ngIf="viewportWidth <= 600">
-    <span style="font-weight: bold">Themen für Studentische Arbeiten</span>
-  </mat-toolbar-row>
-</mat-toolbar>
-
-
+         <div class="header-title">
+          <span *ngIf="viewportWidth > 600" class="header-text">Themen für Studentische Arbeiten</span>
+        </div>
+        <div class="header-icon">
+          <mat-icon (click)="clickOnInfoIcon()" matTooltip="Mehr Infos" class="info-icon">
+            info
+          </mat-icon>
+        </div>
+      </mat-toolbar-row>
+      <mat-toolbar-row *ngIf="viewportWidth <= 600" class="header-title-mobile">
+        <span class="header-text">Themen für Studentische Arbeiten</span>
+      </mat-toolbar-row>
+    </mat-toolbar>
+    
 
 <mat-drawer-container autosize class="announcement_list_top" hasBackdrop="true"
                       style="margin-bottom: 50px; min-height: 50px">
