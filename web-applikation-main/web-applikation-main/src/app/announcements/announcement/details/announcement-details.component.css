@@ -62,5 +62,29 @@
   padding: 3px;
 }
 
+.qr-code-container {
+  background-color: #f8f9fa;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.qr-code-container h4 {
+  font-weight: bold;
+  color: #333;
+}
+
+.btn-custom {
+  background-color: #ff9900; /* Orange Farbe */
+  border-color: #ff9900; /* Randfarbe */
+  color: white; /* Textfarbe */
+}
+
+.btn-custom:hover,
+.btn-custom:focus {
+  background-color: #e68a00; /* Dunklere Orange Farbe beim Hover */
+  border-color: #e68a00; /* Randfarbe beim Hover */
+}
+
 
 

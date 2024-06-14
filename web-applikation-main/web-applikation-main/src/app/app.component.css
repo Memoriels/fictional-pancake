@@ -64,25 +64,72 @@
 
 .footer {
   height: 75px;
-  z-index: 2;
   position: relative;
   overflow: auto;
+  z-index: 2; /* z-index nach oben verschoben für relative Positionierung */
 }
 
 @media screen and (min-width: 600px) {
-  /* .announcement_list_top {
+  .announcement_list_top {
     top: 64px;
-  } */
+  }
 }
 
 @media screen and (max-width: 599px) and (min-width: 551px) {
-  /* .announcement_list_top {
+  .announcement_list_top {
     top: 56px;
-  } */
+  }
 }
 
 @media screen and (max-width: 550px) {
-  /* .announcement_list_top {
+  .announcement_list_top {
     top: 112px;
-  } */
+  }
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.col-2 {
+  flex: 0 0 auto;
+  width: 230px; /* Beispiel für eine feste Breite */
+  border-right: 2px solid #ccc; /* Beispiel für einen dünnen grauen Rahmen */
+}
+
+@media (max-width: 768px) {
+  .col-2 {
+    width: 100%; /* Spalte nimmt auf kleinen Bildschirmen die volle Breite ein */
+    border-right: none; /* Kein Rahmen auf kleinen Bildschirmen */
+  }
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: column; /* Standard für Mobilgeräte */
+}
+
+@media (min-width: 768px) {
+  .flex-container {
+    flex-direction: row; /* Ändern auf Reihe für Desktops */
+  }
+}
+
+.flex-item {
+  width: 100%; /* Vollständige Breite auf Mobilgeräten */
+}
+
+.filter-container {
+  width: 225px; /* Breite des Filters */
+}
+
+@media (min-width: 768px) {
+  .filter-container {
+    width: auto; /* Auf Desktops keine feste Breite */
+  }
+}
+
+.list-container {
+  flex: 1; /* Nimmt den verfügbaren Platz ein */
 }
