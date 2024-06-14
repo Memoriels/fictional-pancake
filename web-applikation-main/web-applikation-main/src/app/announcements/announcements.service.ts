@@ -11,6 +11,7 @@ import { Person } from '../communitymashup/model/person.model';
 import { Organisation } from '../communitymashup/model/organisation.model';
 import { Tag } from '../communitymashup/model/tag.model';
 
+
 @Injectable({
   providedIn: 'root',
 })
@@ -97,7 +98,8 @@ export class AnnouncementsService {
     organisations: Organisation[],
     tags: Tag[],
     person?: Person
-  ): Announcement {
+  ): Announcement
+   {
     const announcement: Announcement = {
       advisor: '',
       advisorMail: '',

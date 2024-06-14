@@ -16,6 +16,9 @@ import {HashLocationStrategy, LocationStrategy, NgOptimizedImage} from "@angular
 import {MatSnackBar} from "@angular/material/snack-bar";
 import {AdvertisementSnackbarComponent} from "./advertisement-snackbar/advertisement-snackbar.component";
 
+
+
+
 @NgModule({
   declarations: [
     AppComponent,

@@ -1,5 +1,8 @@
-import {Component} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {Announcement} from "../../announcements";
+import { Router, ActivatedRoute } from '@angular/router';
+
+
 
 @Component({
   selector: 'app-announcement-details',
@@ -8,7 +11,20 @@ import {Announcement} from "../../announcements";
 })
 export class AnnouncementDetailsComponent {
   announcement!: Announcement;
+  currentUrl!: string;
 
+  
+
+  constructor(private router: Router, private activatedRoute: ActivatedRoute) {}
+
+  ngOnInit(): void {
+    this.getCurrentUrl();
+  }
+
+  getCurrentUrl(): void {
+    this.currentUrl = this.router.url;
+    console.log(this.currentUrl);
+  }
   getAnnouncementStateBackgroundColor() {
     if (this.announcement) {
       switch (this.announcement.state) {
@@ -24,4 +40,10 @@ export class AnnouncementDetailsComponent {
   }
 
   protected readonly window = window;
+
+  
+
+  title = 'my-qr-code-app';
 }
+
+
