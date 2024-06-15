@@ -1,8 +1,7 @@
 <mat-toolbar role="heading" style="position: sticky; top: 0; z-index: 2; background-color: rgb(153, 151, 151);">
   <mat-toolbar-row>
     <!-- Optionale Icons oder andere Elemente hier einfügen -->
-    <img *ngIf="!isInIFrame" ngSrc="assets/1280px-Signet_unibw.svg.png" style="max-height: 40px; width: auto; margin-left: 40px; margin-right: 40px" alt="image" height="247"
-    width="1280">
+    <img *ngIf="!isInIFrame" ngSrc="assets/1280px-Signet_unibw.svg.png" style="max-height: 40px; width: auto; margin-left: 40px; margin-right: 40px" alt="image" height="247" width="1280">
     <div style="margin-left: auto">
       <span *ngIf="viewportWidth > 600" style="font-weight: bold; margin-right: 10px">Themen für Studentische Arbeiten</span>
       <mat-icon (click)="clickOnInfoIcon()" matTooltip="Mehr Infos" style="cursor: pointer; vertical-align: bottom">
@@ -24,29 +23,116 @@
   </div>
 </div>
 
-<mat-toolbar class="footer" style="background-color: #ed6600; color: white; height: 20vh; display: flex; justify-content: center; align-items: center;">
-  <div style="text-align: center;">
-    <div style="margin-bottom: 5px;">
-      <div>Universität der Bundeswehr München</div>
+
+<mat-toolbar class="footer" style="background-color: #282828; color: white; height: 50vh; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+  <div style="width: 100%; display: flex; justify-content: space-between; padding: 20px 10%; max-width: 1200px;">
+    <div style="text-align: left;">
+      <h3>Anschrift</h3>
+      <div>Institut für Softwaretechnologie</div>
+      <div>Fakult&auml;t für Informatik</div>
+      <div>Universit&auml;t der Bundeswehr M&uuml;nchen</div>
       <div>Werner-Heisenberg-Weg 39</div>
       <div>85577 Neubiberg</div>
-    </div>
-    <div style="display: flex; flex-direction: row; justify-content: center; margin-top: 2px;">
-      <div style="margin-right: 10px;">
-        <a href="https://de.linkedin.com/school/universitaet-der-bundeswehr-muenchen//" target="_blank">
-          <mat-icon style="cursor: pointer; color: white; font-size: 20px;">linkedin</mat-icon>
-        </a>
-      </div>
-      <div style="margin-right: 10px;">
-        <a href="https://www.facebook.com/UniBwMuc/?locale=de_DE" target="_blank">
-          <mat-icon style="cursor: pointer; color: white; font-size: 20px;">facebook</mat-icon>
-        </a>
+      <div style="margin-top: 10px;">
+        <span style="display: flex; align-items: center;">
+          <mat-icon style="font-size: 20px; color: #ff6600;">phone</mat-icon>
+          <span style="margin-left: 10px;">+49 (89) 6004-2505</span>
+        </span>
+        <span style="display: flex; align-items: center; margin-top: 5px;">
+          <mat-icon style="font-size: 20px; color: #ff6600;">email</mat-icon>
+          <span style="margin-left: 10px;"><a href="mailto:inf2@unibw.de" style="color: #ffffff; text-decoration: none;">inf2@unibw.de</a></span>
+        </span>
       </div>
     </div>
-    <div style="font-size: 12px; margin-top: 5px;">
-      <div>
-        Made with <mat-icon style="cursor: pointer; color: white; font-size: 12px;">favorite</mat-icon> in Angular
+    <div style="text-align: left;">
+      <h3>Address</h3>
+      <div>Institute for Software Technology</div>
+      <div>Computer Science Department</div>
+      <div>Universit&auml;t der Bundeswehr M&uuml;nchen</div>
+      <div>Werner-Heisenberg-Weg 39</div>
+      <div>85577 Neubiberg</div>
+      <div>Germany</div>
+    </div>
+    <!-- z.B. Instagram wird nicht angezeigt, existiert aber??! -->
+    <div style="text-align: center;">
+      <h3>Social Media</h3>
+      <div style="display: flex; justify-content: center; gap: 10px; margin-top: 10px;">
+        <a href="https://www.facebook.com/UniBwMuc/?locale=de_DE" target="_blank" style="color: white;">
+          <mat-icon style="font-size: 30px;">facebook</mat-icon>
+        </a>
+        <a href="https://de.linkedin.com/school/universitaet-der-bundeswehr-muenchen/" target="_blank" style="color: white;">
+          <mat-icon style="font-size: 30px;">linkedin</mat-icon>
+        </a>
+        <!-- <a href="https://www.instagram.com/unibwmuc/" target="_blank" style="color: white;">
+          <mat-icon style="font-size: 30px;">instagram</mat-icon>
+        </a>
+        <a href="https://twitter.com/unibwm" target="_blank" style="color: white;">
+          <mat-icon style="font-size: 30px;">twitter</mat-icon>
+        </a>
+        <a href="https://www.youtube.com/@UniBwM" target="_blank" style="color: white;">
+          <mat-icon style="font-size: 30px;">youtube</mat-icon>
+        </a>
+        <a href="https://social.bund.de/@unibwm" target="_blank" style="color: white;">
+          <mat-icon style="font-size: 30px;">mastodon</mat-icon>
+        </a> -->
+      </div>
+      <div style="font-size: 12px; margin-bottom: 20px;">
+        <div>
+          Made with <mat-icon style="cursor: pointer; color: white; font-size: 12px;">favorite</mat-icon> in Angular
+        </div>
       </div>
     </div>
   </div>
 </mat-toolbar>
+
+
+<div class="col-md-12 text-right" style="height: 7vh; width: 100%; background-color: #141414; padding: 20px;">
+  <div class="widget m-0">
+    <nav>
+      <ul class="list-inline sm-text-center" style="list-style: none; padding: 0; margin: 0; text-align: center;">
+        <li style="display: inline; margin: 0 10px;">
+          <a href="https://www.unibw.de/home/footer/kontakt" style="color: #808080; text-decoration: none; font-size: 1.1em;">Kontakt</a>
+        </li>
+        <li style="display: inline; margin: 0 10px; color: #ffffff;">|</li>
+        <li style="display: inline; margin: 0 10px;">
+          <a href="https://www.unibw.de/home/footer/impressum" style="color: #808080; text-decoration: none; font-size: 1.1em;">Impressum</a>
+        </li>
+        <li style="display: inline; margin: 0 10px; color: #ffffff;">|</li>
+        <li style="display: inline; margin: 0 10px;">
+          <a href="https://www.unibw.de/home/footer/datenschutzerklaerung" style="color: #808080; text-decoration: none; font-size: 1.1em;">Datenschutzerkl&auml;rung</a>
+        </li>
+        <li style="display: inline; margin: 0 10px; color: #ffffff;">|</li>
+        <li style="display: inline; margin: 0 10px;">
+          <a href="https://www.unibw.de/home/footer/presse-und-kommunikation" style="color: #808080; text-decoration: none; font-size: 1.1em;">Hochschulkommunikation</a>
+        </li>
+        <li style="display: inline; margin: 0 10px; color: #ffffff;">|</li>
+        <li style="display: inline; margin: 0 10px;">
+          <a href="https://email.unibw.de" style="color: #808080; text-decoration: none; font-size: 1.1em;">Webmail</a>
+        </li>
+        <li style="display: inline; margin: 0 10px; color: #ffffff;">|</li>
+        <li style="display: inline; margin: 0 10px;">
+          <a href="https://www.unibw.de/acl_users/oidc/login" style="color: #808080; text-decoration: none; font-size: 1.1em;">Anmeldung</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <!-- Zurück zum Seitenanfang mittels Button: -->
+  <!-- <button onclick="scrollToTop()" id="scrollToTopButton" style="display: none; position: fixed; right: 20px; bottom: 20px; background-color: #333; color: white; border: none; padding: 10px; cursor: pointer; border-radius: 50%;">
+    <span style="font-size: 24px;">&#9650;</span>
+  </button> -->
+</div>
+
+<!-- <script>
+  function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  window.onscroll = function() {
+    var button = document.getElementById("scrollToTopButton");
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      button.style.display = "block";
+    } else {
+      button.style.display = "none";
+    }
+  };
+</script> -->
