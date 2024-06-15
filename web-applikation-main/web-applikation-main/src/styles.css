@@ -6,10 +6,11 @@ html, body {
 
 body {
   margin: 0;
-  font-family: Roboto, "Helvetica Neue", sans-serif;
+  font-family: Arial, sans-serif;
 }
 
 .announcement_details_backdrop {
   backdrop-filter: blur(1px);
   cursor: pointer;
 }
+
