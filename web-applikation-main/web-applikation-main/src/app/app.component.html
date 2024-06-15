@@ -1,16 +1,28 @@
-<mat-toolbar role="heading" style="position: sticky; top: 0; z-index: 2; background-color: rgb(153, 151, 151);">
-  <mat-toolbar-row>
+<mat-toolbar role="heading" style="position: sticky; top: 0; z-index: 2; background-color: #ffffff;">
+  <mat-toolbar-row style="width: 100%; justify-content: center;">
     <!-- Optionale Icons oder andere Elemente hier einfügen -->
     <img *ngIf="!isInIFrame" ngSrc="assets/1280px-Signet_unibw.svg.png" style="max-height: 40px; width: auto; margin-left: 40px; margin-right: 40px" alt="image" height="247" width="1280">
-    <div style="margin-left: auto">
-      <span *ngIf="viewportWidth > 600" style="font-weight: bold; margin-right: 10px">Themen für Studentische Arbeiten</span>
-      <mat-icon (click)="clickOnInfoIcon()" matTooltip="Mehr Infos" style="cursor: pointer; vertical-align: bottom">
+     </mat-toolbar-row>
+
+  <!-- Zwischenreihe mit Institut Logo und Querverweise darunter Orange Linie -->
+  <mat-toolbar-row style="width: 100%; justify-content: center;">
+    <div style="display: flex; justify-content: center; align-items: center; width: 100%;">
+      <span *ngIf="viewportWidth > 600" style="font-weight: bold; margin-right: 10px">ICONS</span>
+      <mat-icon (click)="clickOnInfoIcon()" matTooltip="Mehr Infos" style="cursor: pointer; vertical-align: bottom;">
         info
       </mat-icon>
     </div>
   </mat-toolbar-row>
-  <mat-toolbar-row *ngIf="viewportWidth <= 600">
-    <span style="font-weight: bold">Themen für Studentische Arbeiten</span>
+
+
+  <!-- Überschrift Seite -->
+  <mat-toolbar-row style="width: 100%; justify-content: center; align-items: center; background-color: #999;">
+    <div style="display: flex; align-items: center;">
+      <span *ngIf="viewportWidth > 600" style="font-weight: bold; margin-right: 10px;">THEMEN F&Uuml;R STUDENTISCHE ARBEITEN</span>
+      <mat-icon (click)="clickOnInfoIcon()" matTooltip="Mehr Infos" style="cursor: pointer; color: #fff; font-size: 20px;">
+        info
+      </mat-icon>
+    </div>
   </mat-toolbar-row>
 </mat-toolbar>
 
@@ -23,7 +35,7 @@
   </div>
 </div>
 
-
+<!-- TODO RESTLICHE ICONS ANPASSEN! z.B. Instagram wird nicht angezeigt, existiert aber??! -->
 <mat-toolbar class="footer" style="background-color: #282828; color: white; height: 50vh; display: flex; flex-direction: column; justify-content: center; align-items: center;">
   <div style="width: 100%; display: flex; justify-content: space-between; padding: 20px 10%; max-width: 1200px;">
     <div style="text-align: left;">
