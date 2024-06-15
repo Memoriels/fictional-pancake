@@ -1,29 +1,68 @@
-<mat-toolbar role="heading" style="position: sticky; top: 0; z-index: 2; background-color: rgb(153, 151, 151);">
-  <mat-toolbar-row>
-    <!-- Optionale Icons oder andere Elemente hier einfügen -->
-    <img *ngIf="!isInIFrame" ngSrc="assets/1280px-Signet_unibw.svg.png" style="max-height: 40px; width: auto; margin-left: 40px; margin-right: 40px" alt="image" height="247"
-    width="1280">
-    <div style="margin-left: auto">
-      <span *ngIf="viewportWidth > 600" style="font-weight: bold; margin-right: 10px">Themen für Studentische Arbeiten</span>
-      <mat-icon (click)="clickOnInfoIcon()" matTooltip="Mehr Infos" style="cursor: pointer; vertical-align: bottom">
-        info
-      </mat-icon>
-    </div>
-  </mat-toolbar-row>
-  <mat-toolbar-row *ngIf="viewportWidth <= 600">
-    <span style="font-weight: bold">Themen für Studentische Arbeiten</span>
-  </mat-toolbar-row>
-</mat-toolbar>
+ <!--
+    - LOGO UniBw wird noch nicht angezeigt
+    - NavBar nicht integrieren sondern Amazon
+    - Impressum
+    - Kontrastreiches Designen
+    - Darkmodus
+    - Suche
+        -->
+<mat-toolbar role="heading" style="position: sticky; top: 0; z-index: 2; background-color: #999797;">
+  <mat-toolbar-row style="display: flex; align-items: center;">
+            <!-- Logo UniBw -->
+            <img *ngIf="!isInIFrame" ngSrc="\assets\1280px-Signet_unibw.svg.png" 
+                 style="max-height: 40px; width: auto; margin-left: 20px;" 
+                 alt="Universität der Bundeswehr München Logo">
+        
+            <!-- Anklickbare Boxen -->
+            <div style="display: flex; flex: 1; justify-content: space-around; align-items: center; margin-left: 20px;">
+              <div (click)="navigateTo('institut')" style="cursor: pointer; padding: 10px 20px; background-color: #ed6600; color: white; border-radius: 5px;">
+                Institut
+              </div>
+              <div (click)="navigateTo('personen')" style="cursor: pointer; padding: 10px 20px; background-color: #ed6600; color: white; border-radius: 5px;">
+                Personen
+              </div>
+              <div (click)="navigateTo('forschung')" style="cursor: pointer; padding: 10px 20px; background-color: #ed6600; color: white; border-radius: 5px;">
+                Forschung
+              </div>
+              <div (click)="navigateTo('lehre')" style="cursor: pointer; padding: 10px 20px; background-color: #ed6600; color: white; border-radius: 5px;">
+                Lehre
+              </div>
+        
+              <!-- Suchleiste -->
+              <mat-form-field appearance="outline" style="margin-left: 20px;">
+                <input matInput placeholder="Suchen...">
+                <button mat-icon-button matSuffix aria-label="search">
+                  <mat-icon>Suche</mat-icon>
+                </button>
+              </mat-form-field>
+            </div>
+          </mat-toolbar-row>
+          <mat-toolbar-row *ngIf="viewportWidth > 600">
+            <span style="font-weight: bold; margin-right: 10px">Themen für Studentische Arbeiten</span>
+            <mat-icon (click)="clickOnInfoIcon()" matTooltip="Mehr Infos" style="cursor: pointer; vertical-align: bottom;">
+              infoinfoinfoinfoinfoinfoinfoinfoinfoinfoinfoinfoinfoinfoinfoinfoinfoinfoinfoinfoinfoinfoinfoinfoinfoinfoinfoinfoinfoinfoinfoinfoinfoinfoinfoinfoinfoinfoinfoinfoinfoinfoinfoinfoinfoinfoinfoinfoinfoinfoinfoinfoinfoinfoinfoinfoinfoinfoinfoinfoinfoinfoinfoinfoinfoinfoinfoinfoinfoinfoinfoinfoinfoinfoinfoinfoinfoinfoinfoinfoinfoinfoinfoinfoinfoinfoinfoinfoinfo
+              infoinfoinfoinfoinfoinfoinfoinfoinfoinfoinfoinfoinfoinfoinfoinfo
+              infoinfoinfo
 
-<div class="flex-container">
-  <div class="filter-container">
-    <app-announcements-filter></app-announcements-filter>
-  </div>
-  <div class="list-container">
-    <app-announcement-list></app-announcement-list>
-  </div>
-</div>
 
+              infoinfoinfoinfoinfoinfoinfoinfoinfoinfoinfoinfoinfoinfoinfoinfoinfo
+              infoinfoinfoinfoinfoinfoinfoinfoinfoinfoinfoinfoinfoinfoinfoinfoinfoinfoinfoinfoinfoinfo
+              infoinfoinfoinfoinfoinfoinfoinfoinfoinfoinfoinfo
+              infoinfoinfoinfoinfoinfoinfoinfoinfoinfoinfo
+            </mat-icon>
+          </mat-toolbar-row>
+        </mat-toolbar>
+        
+        <div class="flex-container">
+          <div class="filter-container">
+            <app-announcements-filter></app-announcements-filter>
+          </div>
+          <div class="list-container">
+            <app-announcement-list></app-announcement-list>
+          </div>
+        </div>
+
+<!-- Footer -->
 <mat-toolbar class="footer" style="background-color: #ed6600; color: white; height: 20vh; display: flex; justify-content: center; align-items: center;">
   <div style="text-align: center;">
     <div style="margin-bottom: 5px;">
@@ -31,15 +70,23 @@
       <div>Werner-Heisenberg-Weg 39</div>
       <div>85577 Neubiberg</div>
     </div>
+    <!-- Social Media Links -->
+
+    <!-- Youtube kann auch verlinkt werden -->
     <div style="display: flex; flex-direction: row; justify-content: center; margin-top: 2px;">
       <div style="margin-right: 10px;">
-        <a href="https://de.linkedin.com/school/universitaet-der-bundeswehr-muenchen//" target="_blank">
+        <a href="https://de.linkedin.com/school/universitaet-der-bundeswehr-muenchen/" target="_blank">
           <mat-icon style="cursor: pointer; color: white; font-size: 20px;">linkedin</mat-icon>
         </a>
       </div>
       <div style="margin-right: 10px;">
         <a href="https://www.facebook.com/UniBwMuc/?locale=de_DE" target="_blank">
           <mat-icon style="cursor: pointer; color: white; font-size: 20px;">facebook</mat-icon>
+        </a>
+      </div>
+      <div style="margin-right: 10px;">
+        <a href="https://www.youtube.com/@UniBwM" target="_blank">
+          <mat-icon style="cursor: pointer; color: white; font-size: 20px;">youtube</mat-icon>
         </a>
       </div>
     </div>
